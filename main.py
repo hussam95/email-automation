@@ -1,4 +1,5 @@
-# Import Libararies and packages
+"""https://www.geeksforgeeks.org/how-to-send-automated-email-messages-in-python/"""
+
 from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
 from email.mime.application import MIMEApplication
@@ -10,13 +11,6 @@ import getpass
 import streamlit as st
 from PIL import Image 
 import pandas as pd
-from win32com.client import Dispatch
-
-# Error function
-def speak(str):
-    speak = Dispatch("SAPI.SpVoice")
-    speak.Speak(str)
-
 
 # Landing Page Image Loading
 img = Image.open(r"C:\Users\Hussam\Desktop\email_automation\zem dash header public view.jpg")
@@ -97,27 +91,25 @@ if send_email==True:
         to_addrs=to, msg=msg.as_string())
         smtp.quit()
         st.success(f"{len(recipients)} emails sent successfully to {choice}")
-        speak(f"{len(recipients)} emails sent successfully to {choice}")
-
+        
     except Exception as e:
         if email_sender == "":
             st.error("Please fill Sender's Email field")
-            speak("Please fill Sender's Email field")
+            
         elif sender_pass == "":
             st.error("Please fill Password field")
-            speak("Please fill Password field")
+            
         elif len(recipients) == 0:
             st.error("Please select recipient group from the side bar")
-            speak("Please select recipient group from the side bar")
+            
         else:
             internet_check = os.system("ping www.google.com")
             if internet_check == 1:
                 st.error("Please connect to the internet")
-                speak("Please connect to the internet")
+                
             else:
                 st.error("Wrong Email or Password")
-                speak("Wrong Email or Password")
-    
+                
 
 # Copyright 
 st.markdown("<i style='text-align: center; color: Blue;'>&copy;This app is built using Streamlit and Python ~hussam</i>", unsafe_allow_html=True)
