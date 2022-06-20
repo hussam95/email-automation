@@ -22,3 +22,5 @@ with Outlook to generate batch emails.
 
 
 **Click [here](https://share.streamlit.io/hussam95/email_automation/main/main.py) to view the web app.**
+
+Disclaimer: Due permission has been taken from the employer before publishing this app. This app, or any file in its repository, doesn't leak any confidential information about the employer.
