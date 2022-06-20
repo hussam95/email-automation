@@ -1,3 +1,5 @@
+"""https://www.geeksforgeeks.org/how-to-send-automated-email-messages-in-python/"""
+
 from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
 from email.mime.application import MIMEApplication
@@ -11,7 +13,7 @@ from PIL import Image
 import pandas as pd
 
 # Landing Page Image Loading
-img = Image.open(r"C:\Users\Hussam\Desktop\email_automation\zem dash header public view.jpg")
+img = Image.open(r"C:\Users\Hussam\Desktop\email_automation\zem.jpg")
 
 # Landing Page Col Type Header
 col1, col2, col3 = st.columns(3)
