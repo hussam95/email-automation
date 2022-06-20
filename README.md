@@ -19,3 +19,6 @@ batch emails. Users can select different departments or their heads to email the
 Built for an employer to ease HR's workflow.
 Employer's domain/mail-server was incompatible
 with Outlook to generate batch emails.
+
+
+**Click [here](https://share.streamlit.io/hussam95/email_automation/main/main.py) to view the web app.**
