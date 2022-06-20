@@ -12,8 +12,11 @@ import streamlit as st
 from PIL import Image 
 import pandas as pd
 
+pwd = os.getcwd()
+img_path = os.path.join(pwd, "zem.jpg")
+csv_path = os.path.join(pwd, "email_record_ZEM.csv")
 # Landing Page Image Loading
-img = Image.open(r"C:\Users\Hussam\Desktop\email_automation\zem.jpg")
+img = Image.open(img_path)
 
 # Landing Page Col Type Header
 col1, col2, col3 = st.columns(3)
@@ -40,7 +43,7 @@ email_content  = st.text_area("Email Body")
 send_email = st.button("Send Email")
 
 # Email Data Connection
-email_data  = pd.read_csv(r"\Users\Hussam\Desktop\email_automation\email_record_ZEM.csv")
+email_data  = pd.read_csv(csv_path)
 
 # Sifitng Email dataframe w.r.t user selection 
 if choice == "Finance and Accounts":
@@ -113,3 +116,4 @@ if send_email==True:
 
 # Copyright 
 st.markdown("<i style='text-align: center; color: Blue;'>&copy;This app is built using Streamlit and Python ~hussam</i>", unsafe_allow_html=True)
+
