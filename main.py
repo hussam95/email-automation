@@ -1,5 +1,3 @@
-"""https://www.geeksforgeeks.org/how-to-send-automated-email-messages-in-python/"""
-
 from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
 from email.mime.application import MIMEApplication
