@@ -3,7 +3,7 @@
 ### Details
 
 - The frontend of this app is built using
-Stremlit. 
+Streamlit. 
 
 - Backend is built in Python while
 the Dev Ops are performed using Streamlits' 
@@ -16,6 +16,6 @@ batch emails. Users can select different departments or their heads to email the
 
 ### Use Case
 
-Built for an employer to easer HR's workflow.
+Built for an employer to ease HR's workflow.
 Employer's domain/mail-server was incompatible
 with Outlook to generate batch emails.
