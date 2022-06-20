@@ -13,7 +13,7 @@ from PIL import Image
 import pandas as pd
 
 # Landing Page Image Loading
-img = Image.open(r"C:\Users\Hussam\Desktop\email_automation\zem.jpg")
+img = Image.open(r"C:\\Users\\Hussam\\Desktop\\email_automation\\zem.jpg")
 
 # Landing Page Col Type Header
 col1, col2, col3 = st.columns(3)
@@ -40,7 +40,7 @@ email_content  = st.text_area("Email Body")
 send_email = st.button("Send Email")
 
 # Email Data Connection
-email_data  = pd.read_csv(r"\Users\Hussam\Desktop\email_automation\email_record_ZEM.csv")
+email_data  = pd.read_csv(r"\\Users\Hussam\\Desktop\\email_automation\\email_record_ZEM.csv")
 
 # Sifitng Email dataframe w.r.t user selection 
 if choice == "Finance and Accounts":
