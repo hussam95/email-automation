@@ -1,7 +1,10 @@
+"""https://www.geeksforgeeks.org/how-to-send-automated-email-messages-in-python/"""
+
 from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
 from email.mime.application import MIMEApplication
 from email.mime.multipart import MIMEMultipart
+from email.header import Header
 from secrets import choice
 import smtplib
 import os
@@ -10,9 +13,13 @@ import streamlit as st
 from PIL import Image 
 import pandas as pd
 
+# Path Definations
 pwd = os.getcwd()
+
+# Locating Helper Files Setting Relative Paths to Avoid Hosting Issues
 img_path = os.path.join(pwd, "zem.jpg")
 csv_path = os.path.join(pwd, "email_record_ZEM.csv")
+
 # Landing Page Image Loading
 img = Image.open(img_path)
 
@@ -85,6 +92,7 @@ if send_email==True:
 
         msg = MIMEMultipart()
         msg['Subject'] = subject
+        msg['From'] = str(Header(f'{email_sender}'))
         msg.attach(MIMEText(email_content))
 
         to = recipients 
@@ -114,4 +122,3 @@ if send_email==True:
 
 # Copyright 
 st.markdown("<i style='text-align: center; color: Blue;'>&copy;This app is built using Streamlit and Python ~hussam</i>", unsafe_allow_html=True)
-
