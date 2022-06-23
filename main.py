@@ -120,3 +120,6 @@ if send_email==True:
 
 # Copyright 
 st.markdown("<i style='text-align: center; color: Blue;'>&copy;This app is built using Streamlit and Python ~hussam</i>", unsafe_allow_html=True)
+
+
+#Let's work on v1.0.1 by adding the attachment funcitonality to our app Zem Mail
