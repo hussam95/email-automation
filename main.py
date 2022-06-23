@@ -96,6 +96,7 @@ def attach_bytesio_to_email(email, buf, filename):
 
 # Attach files
 uploaded_files = st.file_uploader("Choose attachments",accept_multiple_files=True)
+
 for uploaded_file in uploaded_files:
     bytes_data = uploaded_file.read()
     buf = BytesIO()
@@ -108,5 +109,32 @@ def send_mail_smtp(mail, host, username, password):
     s.login(username, password)
     s.send_message(msg)
     s.quit()
+
+
 if st.button("Send Mail"):
-    send_mail_smtp(msg, 'mail.zembuilders.com', email_sender, sender_pass)
+    try:
+        send_mail_smtp(msg, 'mail.zembuilders.com', email_sender, sender_pass)
+        st.success(f"{len(recipients)} emails sent successfully to {choice}")
+        
+    except Exception as e:
+        if email_sender == "":
+            st.error("Please fill Sender's Email field")
+            
+        elif sender_pass == "":
+            st.error("Please fill Password field")
+            
+        elif len(recipients) == 0:
+            st.error("Please select recipient group from the side bar")
+            
+        else:
+            internet_check = os.system("ping www.google.com")
+            if internet_check == 1:
+                st.error("Please connect to the internet")
+                
+            else:
+                st.error("Wrong Email or Password")
+                
+
+# Copyright 
+st.markdown("<i style='text-align: center; color: Blue;'>&copy;This app is built using Streamlit and Python ~hussam</i>",
+ unsafe_allow_html=True)
