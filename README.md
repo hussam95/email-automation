@@ -1,4 +1,4 @@
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]([https://share.streamlit.io/[user name]/[repo name]/[branch name]/[app path]](https://hussam95-email-automation-main-iomo7l.streamlitapp.com/))
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]((https://hussam95-email-automation-main-iomo7l.streamlitapp.com/))
 
 # email_automation v1.0.1
 
