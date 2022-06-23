@@ -3,6 +3,8 @@ from email.mime.image import MIMEImage
 from email.mime.application import MIMEApplication
 from email.mime.multipart import MIMEMultipart
 from email.header import Header
+from email.mime.base import MIMEBase
+from email import encoders
 from secrets import choice
 import smtplib
 import os
@@ -43,6 +45,29 @@ email_sender = st.text_input("Enter Sender's Email")
 sender_pass = st.text_input("Enter Sender's password", type="password")
 subject = st.text_input("Enter Email's subject")
 email_content  = st.text_area("Email Body")
+uploaded_files = st.file_uploader("Choose files", accept_multiple_files=True)
+msg = MIMEMultipart()
+if uploaded_files == True:
+    for uploaded_file in uploaded_files:
+        bytes_data = uploaded_file.read()
+        msg.attach(bytes_data)
+        st.write("filename:", uploaded_file.name)
+        st.write(bytes_data)
+    # for uploaded_file in uploaded_files:
+    #     part = MIMEBase('application', 'octet-stream')
+    #     part.set_payload((uploaded_file).read())
+    #     encoders.encode_base64(part)
+    #     part.add_header('Content-Disposition', "attachment; filename= %s" % uploaded_file)
+    #     msg.attach(part)
+    #     #bytes_data = uploaded_file.read()
+        # st.write("filename:", uploaded_file.name)
+        # st.write(bytes_data)
+        # # fo=open(uploaded_file,'rb')
+        # attach = MIMEApplication(fo.read(),_subtype=uploaded_file.name.split(".")[1])
+        # fo.close()
+        # attach.add_header('Content-Disposition','attachment',filename=uploaded_file.name)
+        # msg.attach(attach)
+
 send_email = st.button("Send Email")
 
 # Email Data Connection
@@ -79,6 +104,9 @@ elif choice == "Department Heads":
     "Akbar Aziz Burqi","Kamil Qamar","Abdul Sattar", "Ismail Haiderr", "Asad Rasheed", "Ahmad Tohaeed Qasmi"]
     recipients = email_data[email_data["Names"].isin(heads)]["Email"].to_list()
 
+
+
+
 # Main 
 if send_email==True:
     try:
@@ -88,11 +116,10 @@ if send_email==True:
         smtp.starttls()
         smtp.login(email_sender, password)
 
-        msg = MIMEMultipart()
+        #msg = MIMEMultipart()
         msg['Subject'] = subject
         msg['From'] = str(Header(f'{email_sender}'))
         msg.attach(MIMEText(email_content))
-
         to = recipients 
         smtp.sendmail(from_addr=email_sender,
         to_addrs=to, msg=msg.as_string())
@@ -120,6 +147,5 @@ if send_email==True:
 
 # Copyright 
 st.markdown("<i style='text-align: center; color: Blue;'>&copy;This app is built using Streamlit and Python ~hussam</i>", unsafe_allow_html=True)
-
 
 #Let's work on v1.0.1 by adding the attachment funcitonality to our app Zem Mail
