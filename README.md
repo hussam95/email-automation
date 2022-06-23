@@ -27,6 +27,6 @@ Employer's domain/mail-server was incompatible
 with Outlook to generate batch emails.
 
 
-**Click [here](https://share.streamlit.io/hussam95/email_automation/main/main.py](https://hussam95-email-automation-main-iomo7l.streamlitapp.com/) to view the web app.**
+**Click [here](https://hussam95-email-automation-main-iomo7l.streamlitapp.com/) to view the web app.**
 
 Disclaimer: Due permission has been taken from the employer before publishing this app. This app, or any file in its repository, doesn't leak any confidential information about the employer.
