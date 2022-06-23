@@ -1,1 +1,32 @@
 # email_automation v1.0.1
+
+### Update Details
+- Version 1.0.0 allowed the users to send batch emails to different intra-domain groups without attachments.
+- Version 1.0.1 now allows to send attachments files of any type to group recipients.
+
+Note: **The `ByteIo objects` created by the users when they drag and drop or browse files for attachments are sent directly to the recipients without requiring to store uploads on the server.**
+
+### Details
+
+- The frontend of this app is built using
+Streamlit. 
+
+- Backend is built in Python while
+the Dev Ops are performed using Streamlits' 
+cloud hosting service.
+
+### Functionality
+
+This app allows the users to send intra-domain
+batch emails. Users can select different departments or their heads to email them in batches.
+
+### Use Case
+
+Built for an employer to ease HR's workflow.
+Employer's domain/mail-server was incompatible
+with Outlook to generate batch emails.
+
+
+**Click [here](https://share.streamlit.io/hussam95/email_automation/main/main.py) to view the web app.**
+
+Disclaimer: Due permission has been taken from the employer before publishing this app. This app, or any file in its repository, doesn't leak any confidential information about the employer.
