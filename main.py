@@ -23,12 +23,12 @@ def attach_bytesio_to_email(email, buf, filename):
     email.add_attachment(binary_data, maintype=maintype, subtype=subtype, filename=filename)
 
 # Attach files
-uploaded_files = st.file_uploader(accept_multiple_files=True)
+uploaded_files = st.file_uploader("Choose attachments",accept_multiple_files=True)
 for uploaded_file in uploaded_files:
     bytes_data = uploaded_file.read()
     buf = BytesIO()
     buf.write(bytes_data)
-    attach_bytesio_to_email(msg, buf, "test.txt")
+    attach_bytesio_to_email(msg, buf, uploaded_file.name)
 
 def send_mail_smtp(mail, host, username, password):
     s = smtplib.SMTP(host)
@@ -36,5 +36,5 @@ def send_mail_smtp(mail, host, username, password):
     s.login(username, password)
     s.send_message(msg)
     s.quit()
-
-send_mail_smtp(msg, 'mail.zembuilders.com', 'hussam.haq@zembuilders.com', 'zembuilders@1234')
+if st.button("Send Mail"):
+    send_mail_smtp(msg, 'mail.zembuilders.com', 'hussam.haq@zembuilders.com', 'zembuilders@1234')
