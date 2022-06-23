@@ -6,7 +6,7 @@
 
 Note: **The `ByteIo objects` created by the users when they drag and drop or browse files for attachments are sent directly to the recipients without requiring to store uploads on the server.**
 
-### Details
+### App Details
 
 - The frontend of this app is built using
 Streamlit. 
@@ -27,6 +27,6 @@ Employer's domain/mail-server was incompatible
 with Outlook to generate batch emails.
 
 
-**Click [here](https://share.streamlit.io/hussam95/email_automation/main/main.py) to view the web app.**
+**Click [here]([https://share.streamlit.io/hussam95/email_automation/main/main.py](https://hussam95-email-automation-main-iomo7l.streamlitapp.com/)) to view the web app.**
 
 Disclaimer: Due permission has been taken from the employer before publishing this app. This app, or any file in its repository, doesn't leak any confidential information about the employer.
