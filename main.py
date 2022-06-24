@@ -45,10 +45,12 @@ email_content  = st.text_area("Email Body")
 email_data  = pd.read_csv(csv_path)
 
 # Sifitng Email dataframe w.r.t user selection 
-if choice == "Finance and Accounts":
+if choice == "Finance":
     recipients = email_data[email_data["Deparment"]=="Finance and Accounts"]["Email"].to_list()
-elif choice == "Audit Compliance":
+elif choice == "Audit":
     recipients = email_data[email_data["Deparment"]=="Audit Compliance"]["Email"].to_list()
+elif choice == "Engineering":
+    recipients = email_data[email_data["Deparment"]=="Engineering"]["Email"].to_list()    
 elif choice == "Operations":
     recipients = email_data[email_data["Deparment"]=="Operations"]["Email"].to_list()
 elif choice == "HR":
