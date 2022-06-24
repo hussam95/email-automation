@@ -30,7 +30,7 @@ with col3:
     st.write("")
 
 # Email Groups
-email_groups = ["All", "Department Heads", "Admin", "Audit", "Engineering", "Executive", "Finance", "HR", "IT", "Marketing","Operations", "Procurement"
+email_groups = ["All", "Department Heads", "Admin", "Audit", "Engineering", "Executive", "Finance", "HR", "IT", "Marketing","Operations", "Procurement",
  "QA", "Sales -Bahria Enclave", "Sales -GT Road", "Sales -Phase 08"]
 
 # User Selections/Inputs
