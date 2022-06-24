@@ -1,3 +1,5 @@
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/hussam95/email_automation/main/main.py)
+
 # email_automation
 
 ### Details
