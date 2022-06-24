@@ -30,8 +30,8 @@ with col3:
     st.write("")
 
 # Email Groups
-email_groups = ["All", "Department Heads", "Admin", "Audit", "Engineering", "Executive", "Finance", "HR", "IT", "Marketing","Operations",
- "Sales -Bahria Enclave", "Sales -GT Road", "Sales -Phase 08"]
+email_groups = ["All", "Department Heads", "Admin", "Audit", "Engineering", "Executive", "Finance", "HR", "IT", "Marketing","Operations", "Procurement"
+ "QA", "Sales -Bahria Enclave", "Sales -GT Road", "Sales -Phase 08"]
 
 # User Selections/Inputs
 choice = st.sidebar.selectbox("Select Email Recepient Group", email_groups)
@@ -59,15 +59,15 @@ elif choice == "Sales -GT Road":
     recipients = email_data[email_data["Deparment"]=="Sales -GT Road"]["Email"].to_list()
 elif choice == "Marketing":
     recipients = email_data[email_data["Deparment"]=="Marketing"]["Email"].to_list()
-elif choice == "Quality Assurance":
+elif choice == "QA":
     recipients = email_data[email_data["Deparment"]=="Quality Assurance"]["Email"].to_list()
 elif choice == "IT":
     recipients = email_data[email_data["Deparment"]=="IT"]["Email"].to_list()
 elif choice == "Admin":
     recipients = email_data[email_data["Deparment"]=="Admin"]["Email"].to_list()
-elif choice == "Procurement and Security":
+elif choice == "Procurement":
     recipients = email_data[email_data["Deparment"]=="Procurement and Security"]["Email"].to_list()
-elif choice == "Executive Office":
+elif choice == "Executive":
     recipients = email_data[email_data["Deparment"]=="Executive Office"]["Email"].to_list()
 elif choice == "All":
     recipients = email_data["Email"].to_list()
