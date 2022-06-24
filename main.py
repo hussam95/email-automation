@@ -58,9 +58,9 @@ elif choice == "HR":
 elif choice == "Sales -GT Road":
     recipients = email_data[email_data["Deparment"]=="Sales -GT Road"]["Email"].to_list()
 elif choice == "Sales -Phase 08":
-    recipients = email_data[email_data["Deparment"]=="Sales -GT Road"]["Email"].to_list()
-elif choice == "Sales - Bahria Enclave":
-    recipients = email_data[email_data["Deparment"]=="Sales -GT Road"]["Email"].to_list()    
+    recipients = email_data[email_data["Deparment"]=="Sales -Phase 08"]["Email"].to_list()
+elif choice == "Sales -Bahria Enclave":
+    recipients = email_data[email_data["Deparment"]=="Sales - Bahria Enclave"]["Email"].to_list()    
 elif choice == "Marketing":
     recipients = email_data[email_data["Deparment"]=="Marketing"]["Email"].to_list()
 elif choice == "QA":
