@@ -3,7 +3,7 @@
 
 ### Update Details
 - Version 1.0.0 allowed the users to send batch emails to different intra-domain groups without attachments.
-- Version 1.0.1 now allows to send attachments files of any type to group recipients.
+- Version 1.0.1 now allows to send attachment files of any type to group recipients.
 
 Note: **The `ByteIo objects` created by the users when they drag and drop or browse files for attachments are sent directly to the recipients without requiring to store uploads on the server.**
 
